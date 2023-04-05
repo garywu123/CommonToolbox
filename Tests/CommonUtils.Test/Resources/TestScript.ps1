@@ -1,0 +1,2 @@
+Write-Host "TEST"
+Pause

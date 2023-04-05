@@ -83,8 +83,6 @@ namespace CommonUtils
 			var target = hostAddress  + targetFilePath;
 
 			var targetNode = await Node.GetNode(target, accountInfo.Username, accountInfo.Password, true);
-			
-			targetNode.CreateFolder()
 
 			using (var stream = await targetNode.Read())
 			{
