@@ -50,6 +50,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DoubleExtension.cs" />
     <Compile Include="PowerShellUtils.cs" />
     <Compile Include="Smb2ClientFileUtils.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
