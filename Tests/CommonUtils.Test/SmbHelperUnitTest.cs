@@ -5,7 +5,7 @@ using Xunit.Abstractions;
 
 namespace CommonUtils.Test;
 
-public class UnitTest1
+public class SmbHelperUnitTest
 {
 	#region Static Fields
 
@@ -25,7 +25,7 @@ public class UnitTest1
 
 	#region Constructors
 
-	public UnitTest1(ITestOutputHelper testOutputHelper) { _testOutputHelper = testOutputHelper; }
+	public SmbHelperUnitTest(ITestOutputHelper testOutputHelper) { _testOutputHelper = testOutputHelper; }
 
 	#endregion
 

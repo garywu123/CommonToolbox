@@ -6,6 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{C56243CC-BE80-47D3-A5A2-AAA3A5093926}</ProjectGuid>
     <OutputType>Library</OutputType>
+    <LangVersion>latest</LangVersion>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>CommonUtils</RootNamespace>
     <AssemblyName>CommonUtils</AssemblyName>
@@ -34,6 +35,9 @@
     <Reference Include="EzSmb, Version=1.3.10.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\EzSmb.1.3.10\lib\netstandard2.0\EzSmb.dll</HintPath>
     </Reference>
+    <Reference Include="Renci.SshNet, Version=2020.0.2.0, Culture=neutral, PublicKeyToken=1cee9f8bde3db106, processorArchitecture=MSIL">
+      <HintPath>..\packages\SSH.NET.2020.0.2\lib\net40\Renci.SshNet.dll</HintPath>
+    </Reference>
     <Reference Include="SMBLibrary, Version=1.4.6.1, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\SMBLibrary.ForXamarin.1.4.6.1\lib\netstandard2.0\SMBLibrary.dll</HintPath>
     </Reference>
@@ -52,12 +56,18 @@
   <ItemGroup>
     <Compile Include="DoubleExtension.cs" />
     <Compile Include="PowerShellUtils.cs" />
+    <Compile Include="ScpUtils.cs" />
     <Compile Include="Smb2ClientFileUtils.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SmbAccountInfo.cs" />
+    <Compile Include="SshUtils.cs" />
+    <Compile Include="FileUtils.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Mvvm\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
