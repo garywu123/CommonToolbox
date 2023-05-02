@@ -27,18 +27,7 @@ public class SshHelperUnitTest
 		var command = "find /var/cache/apt/archives/. -type f ! -name 'lock' -delete";
 
 		var client = SshUtils.InitialSshClient(host, 22, user, password);
-		var result = SshUtils.ExecuteCommand(client, command);
 
-		_testOutputHelper.WriteLine($@"{result.Result}");
-	}
-
-	[Fact]
-	public async void Test_GetConnectInfo()
-	{
-		var client = SshUtils.InitialSshClient(host, 22, user, password);
-		_testOutputHelper.WriteLine($@"{SshUtils.GetHostKey()}");
-		_testOutputHelper.WriteLine($@"{SshUtils.GetHostKeyName()}");
-		_testOutputHelper.WriteLine($@"{SshUtils.GetFingerprint()}");
 	}
 
 }

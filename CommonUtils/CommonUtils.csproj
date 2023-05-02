@@ -54,20 +54,20 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DoubleExtension.cs" />
+    <Compile Include="Numbers\DoubleExtension.cs" />
     <Compile Include="PowerShellUtils.cs" />
-    <Compile Include="ScpUtils.cs" />
-    <Compile Include="Smb2ClientFileUtils.cs" />
+    <Compile Include="SSH\ScpUtils.cs" />
+    <Compile Include="FilesUtils\SMB\Smb2ClientFileUtils.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SmbAccountInfo.cs" />
-    <Compile Include="SshUtils.cs" />
-    <Compile Include="FileUtils.cs" />
+    <Compile Include="FilesUtils\SMB\SmbAccountInfo.cs" />
+    <Compile Include="SSH\SshUtils.cs" />
+    <Compile Include="FilesUtils\FileUtils.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Mvvm\" />
+    <Folder Include="FilesUtils\WinSCP\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

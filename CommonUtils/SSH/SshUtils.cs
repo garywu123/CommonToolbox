@@ -18,11 +18,8 @@ namespace CommonUtils
 
 	public class SshUtils
 	{
-		private static string _hostKey;
-		private static string _fingerPrint;
-		private static string _hostKeyName;
 
-		/// <summary>
+        /// <summary>
 		///     初始化 Ssh Client 对象，方便后续使用
 		/// </summary>
 		/// <param name="hostIp">服务器IP</param>
@@ -40,39 +37,12 @@ namespace CommonUtils
 				}
 			};
 
-			client.HostKeyReceived += ClientOnHostKeyReceived;
 			client.Connect();
 			return client;
 		}
 
-		public static string GetHostKey()
-		{
-			return _hostKey;
-			
-		}
 
-		public static string GetHostKeyName()
-		{
-			
-				return _hostKeyName;
-			
-		}
-
-		public static string GetFingerprint()
-		{
-			return _fingerPrint;
-		}
-
-
-		private static void ClientOnHostKeyReceived(object sender, HostKeyEventArgs e)
-		{
-			_hostKey = BitConverter.ToString(e.HostKey).Replace("-", ":");
-			_fingerPrint = BitConverter.ToString(e.FingerPrint).Replace("-", ":");
-			_hostKeyName = e.HostKeyName;
-		}
-
-
-		/// <summary>
+        /// <summary>
 		///     执行一个 Linux Command，并将 Command 的输出提示返回到 StringBuilder 上
 		/// </summary>
 		/// <param name="client"> ssh client</param>

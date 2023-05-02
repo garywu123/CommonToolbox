@@ -11,7 +11,7 @@ using FileAttributes = SMBLibrary.FileAttributes;
 
 namespace CommonUtils
 {
-	public class Smb2ClientFileUtils
+	public abstract class Smb2ClientFileUtils
 	{
 		#region Static Methods
 
