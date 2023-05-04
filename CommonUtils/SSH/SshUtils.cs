@@ -50,11 +50,9 @@ namespace CommonUtils
 		/// <param name="terminalFeedback">Command 执行的后的反馈</param>
 		/// <param name="terminalErrorFeedback">Command 执行错误信息</param>
 		/// <returns>返回执行后的结果</returns>
-		private static async Task<string> ExecuteCommand(SshClient client, string command)
+		public static async Task<string> ExecuteCommand(SshClient client, string command)
 		{
 			var cmdFeedback = new StringBuilder();
-
-			if (client == null) return null;
 
 			if (!client.IsConnected) await Task.Run(client.Connect);
 

@@ -106,7 +106,7 @@ public class FileUtilsUnitTests
         var progress = new Progress<int>(value => _testOutput.WriteLine($"Progress: {value}"));
 
         // Act
-        var licenses = FileUtils.FindFilesWithExtension(BeckhoffLicenseFolder, BeckhoffLicenseExt);
+        var licenses = FileUtils.FindFilesByExtension(BeckhoffLicenseFolder, BeckhoffLicenseExt);
         var files = new List<string>(licenses)
         {
             BeckhoffConfigXml!,

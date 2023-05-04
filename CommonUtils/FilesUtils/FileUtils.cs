@@ -43,16 +43,6 @@ public static class FileUtils
     }
 
 
-    public static List<string> FindFilesWithExtension(string folder, string extension)
-    {
-        // Get all the files in the folder with the specified extension
-        string[] files = Directory.GetFiles(folder, "*" + extension);
-
-        // Return the list of file paths
-        return files.ToList();
-    }
-
-
     /// <summary>
     ///     Copy files async.
     /// </summary>
@@ -110,6 +100,8 @@ public static class FileUtils
 
         return (filesCopied, failedFiles);
     }
+
+    
 
     /// <summary>
     ///     Delete all the files in the <see cref="directoryPath" />
@@ -197,6 +189,19 @@ public static class FileUtils
             );
 
         return false;
+    }
+
+    /// <summary>
+    ///     Find files that have the specified extension in the directory.
+    /// </summary>
+    /// <param name="directoryPath">folder path</param>
+    /// <param name="extension">extension name</param>
+    /// <returns>return the file list</returns>
+    public static string[] FindFilesByExtension(string directoryPath, string extension)
+    {
+        string[] files = Directory.GetFiles(directoryPath, $"*.{extension}");
+
+        return files;
     }
 
     #endregion

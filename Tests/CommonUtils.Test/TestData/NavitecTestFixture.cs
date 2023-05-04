@@ -27,6 +27,8 @@ public class NavitecTestSharedFixture
     public readonly string NavitecLicenseKeyFile = "/home/navitec/licensekey.txt";
     public readonly string NavitecParamsFile = "/home/navitec/params.txt";
 
+    
+
     public readonly string NavitecMapFileExtension = ".nte";
 
     public static IEnumerable<object[]> DownloadFileTestData()
@@ -35,4 +37,6 @@ public class NavitecTestSharedFixture
         yield return new object[] { "/home/navitec/license.txt", "ToolboxTest/ScpHelperTest/LicenseFile" };
         // Add more test cases here...
     }
+
+
 }
